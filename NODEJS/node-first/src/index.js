@@ -8,11 +8,15 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs')
 
 //routes
-app.use(require('./routes/index.js'));
+app.use(require('./routes/routes.js'));
 
 //static files 
 app.use(express.static(path.join(__dirname, 'public')));
 //listen
 app.listen(app.get('port'), ()=>{
-    console.log('Server Port:', app.get('port'));
+  console.log('#################################################################################################');  
+  console.log('#################################################################################################');
+  console.log('#################            Escuchando http://localhost:',app.get('port'),'         #######################');
+  console.log('#################################################################################################');
+  console.log('#################################################################################################');
 });
